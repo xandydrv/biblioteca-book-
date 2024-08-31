@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templo dos Mares</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="site-title">Templo dos Mares</h1>
+        <div class="menu-hamburguer" onclick="toggleMenu()">☰</div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre</a></li> 
+                <li><a href="#">Livros</a>
+                    <ul class="submenu">
+                        <li><a href="#">Ficção</a></li>
+                        <li><a href="#">Não-Ficção</a></li>
+                        <li><a href="#">História</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">contato:41998644465 </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="livros">
+            <article class="livro">
+                <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/7/7e/O_Ladr%C3%A3o_de_Raios.jpg/230px-O_Ladr%C3%A3o_de_Raios.jpg" alt="Livro 1">
+                <h2>Percy Jackson e o Ladrão de Raios</h2>
+            </article>
+            <article class="livro">
+                <img src="https://m.media-amazon.com/images/I/91Jxc9b9meL._SY466_.jpg" alt="Livro 2">
+                <h2>Percy Jackson e o Mar de Monstros</h2>
+            </article>
+            <article class="livro">
+                <img src="https://m.media-amazon.com/images/I/51WVTtHnz7L._SY445_SX342_.jpg" alt="Livro 3">
+                <h2>Percy Jackson e a Maldição do Titã</h2>
+            </article>
+            <article class="livro">
+                <img src="https://m.media-amazon.com/images/I/91IwpwvjO4L._SY466_.jpg" alt="Livro 4">
+                <h2>Percy Jackson e a Batalha do Labirinto</h2>
+            </article>
+            <article class="livro">
+                <img src="https://m.media-amazon.com/images/I/51u0Lir9XhL._SY445_SX342_.jpg" alt="Livro 5">
+                <h2>Percy Jackson e o Último Olimpiano</h2>
+            </article>
+            <article class="livro">
+                <img src="https://m.media-amazon.com/images/I/516mK15dmBL._SY445_SX342_.jpg" alt="Livro 6">
+                <h2>Percy Jackson e o Cálice dos Deuses</h2>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Alexandre e Fabricio</p>
+    </footer>
+
+    <!-- Botão de Voltar ao Topo -->
+    <a href="#" class="back-to-top" onclick="scrollToTop()">↑ Voltar ao topo</a>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Exibir o botão "Voltar ao topo" quando rolar para baixo
+        window.addEventListener('scroll', function() {
+            const button = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) { // Exibe o botão quando o usuário rolar mais de 300px
+                button.classList.add('show');
+            } else {
+                button.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
+
+<section id="sobre" class="content-section" style="display: none;">
+    <h2>Sobre</h2>
+    <p>Essa é uma página dedicada aos livros da obra Percy Jackson do autor Rick Riordan.</p>
+</section>
